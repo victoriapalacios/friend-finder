@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Friend Finder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800" rel="stylesheet">
+  </head>
+
+  <style>
+    body {
+      padding: 50px 50px 100px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    select {
+      display: block;
+      max-width: 300px;
+    }
+
+    .friend-photo {
+      height: 200px;
+      width: 200px;
+    }
+
+  </style>
+
+  <body>
+
+    <h1>Friend Finder</h1>
+
+    <label>First and Last Name</label><br>
+    <input type="text" name="name" id="name" value="Your Name">
+    <br>
+
+    <label>Profile Image</label><br>
+    <input type="text" name="image" id="photo" value="JPG or PNG">
+    <br>
+
+    <form action="/action_page.php">
+      <label>1. You find it difficult to introduce yourself to other people.</label><br>
+      <select name="value" id="q1">
+        <option value="0" selected='selected'>Choose</option>
+        <option value="1">1 - Strongly Disagree</option>
+        <option value="2">2 - Somewhat Disagree</option>
+        <option value="3">3 - Neutral</option>
+        <option value="4">4 - Somewhat Agree</option>
+        <option value="5">5 - Strongly Agree</option>
+      </select><br>
+
+      <label>2. You often get so lost in thoughts that you ignore or forget your surroundings.</label><br>
+      <select name="value" id="q2">
+        <option value="0" selected='selected'>Choose</option>
+        <option value="1">1 - Strongly Disagree</option>
+        <option value="2">2 - Somewhat Disagree</option>
+        <option value="3">3 - Neutral</option>
+        <option value="4">4 - Somewhat Agree</option>
+        <option value="5">5 - Strongly Agree</option>
+      </select><br>
+
+      <label>3. You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.</label><br>
+      <select name="value" id="q3">
+        <option value="0" selected='selected'>Choose</option>
+        <option value="1">1 - Strongly Disagree</option>
+        <option value="2">2 - Somewhat Disagree</option>
+        <option value="3">3 - Neutral</option>
+        <option value="4">4 - Somewhat Agree</option>
+        <option value="5">5 - Strongly Agree</option>
+      </select><br>
+
+      <label>4. You find it easy to stay relaxed and focused even when there is some pressure.</label><br>
+      <select name="value" id="q4">
+        <option value="0" selected='selected'>Choose</option>
+        <option value="1">1 - Strongly Disagree</option>
+        <option value="2">2 - Somewhat Disagree</option>
+        <option value="3">3 - Neutral</option>
+        <option value="4">4 - Somewhat Agree</option>
+        <option value="5">5 - Strongly Agree</option>
+      </select><br>
+
+      <label>5. You do not usually initiate conversations.</label><br>
+      <select name="value" id="q5">
+        <option value="0" selected='selected'>Choose</option>
+        <option value="1">1 - Strongly Disagree</option>
+        <option value="2">2 - Somewhat Disagree</option>
+        <option value="3">3 - Neutral</option>
+        <option value="4">4 - Somewhat Agree</option>
+        <option value="5">5 - Strongly Agree</option>
+      </select><br>
+
+      <label>6. You feel superior to other people.</label><br>
+      <select name="value" id="q6">
+        <option value="0" selected='selected'>Choose</option>
+        <option value="1">1 - Strongly Disagree</option>
+        <option value="2">2 - Somewhat Disagree</option>
+        <option value="3">3 - Neutral</option>
+        <option value="4">4 - Somewhat Agree</option>
+        <option value="5">5 - Strongly Agree</option>
+      </select><br>
+
+      <label>7. Being organized is more important to you than being adaptable.</label><br>
+      <select name="value" id="q7">
+        <option value="0" selected='selected'>Choose</option>
+        <option value="1">1 - Strongly Disagree</option>
+        <option value="2">2 - Somewhat Disagree</option>
+        <option value="3">3 - Neutral</option>
+        <option value="4">4 - Somewhat Agree</option>
+        <option value="5">5 - Strongly Agree</option>
+      </select><br>
+
+      <label>8. You are usually highly motivated and energetic.</label><br>
+      <select name="value" id="q8">
+        <option value="0" selected='selected'>Choose</option>
+        <option value="1">1 - Strongly Disagree</option>
+        <option value="2">2 - Somewhat Disagree</option>
+        <option value="3">3 - Neutral</option>
+        <option value="4">4 - Somewhat Agree</option>
+        <option value="5">5 - Strongly Agree</option>
+      </select><br>
+
+      <label>9. Winning a debate matters less to you than making sure no one gets upset.</label><br>
+      <select name="value" id="q9">
+        <option value="0" selected='selected'>Choose</option>
+        <option value="1">1 - Strongly Disagree</option>
+        <option value="2">2 - Somewhat Disagree</option>
+        <option value="3">3 - Neutral</option>
+        <option value="4">4 - Somewhat Agree</option>
+        <option value="5">5 - Strongly Agree</option>
+      </select><br>
+
+      <label>10. You often feel as if you have to justify yourself to other people.</label><br>
+      <select name="value" id="q10">
+        <option value="0" selected='selected'>Choose</option>
+        <option value="1">1 - Strongly Disagree</option>
+        <option value="2">2 - Somewhat Disagree</option>
+        <option value="3">3 - Neutral</option>
+        <option value="4">4 - Somewhat Agree</option>
+        <option value="5">5 - Strongly Agree</option>
+      </select><br>
+
+    </form>
+
+    <!-- Modal Trigger -->
+    <button id="submit" data-target="modal1" class="btn modal-trigger">Submit</button>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Your new best friend is:</h4>
+        <p id="friendName"></p>
+        <img class="friend-photo" id="friendPhoto" src="">
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+      </div>
+    </div>
+
+  </body>
+
+
+  <script>
+    // Below is the JS used to capture userInputs when Submit button is clicked
+    $(document).ready(function() {
+
+      $('#submit').on("click", function() {
+        event.preventDefault();
+        // console.log("working");
+
+      var userInputs = {
+          name: $('#name').val().trim(),
+          photo: $('#photo').val().trim(),
+          scores: [
+              $('#q1').val(),
+              $('#q2').val(),
+              $('#q3').val(),
+              $('#q4').val(),
+              $('#q5').val(),
+              $('#q6').val(),
+              $('#q7').val(),
+              $('#q8').val(),
+              $('#q9').val(),
+              $('#q10').val(),
+          ]
+        };
+
+       console.log(userInputs);
+
+       //Grabs current URL of website
+            var currentURL = window.location.origin;
+
+        // Post userInput data to friends variable
+        $.post(currentURL + "/api/friends", userInputs, function(data) {
+
+            // Post closest match to modal?
+            $("#friendName").text(data.name);
+            $("#friendPhoto").attr("src", data.photo);
+        });
+
+      });
+
+      // below triggers modal on button click
+      $('.modal').modal();
+
+    });
+  </script>
+
+</html>
+
